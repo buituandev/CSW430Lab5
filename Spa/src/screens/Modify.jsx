@@ -1,5 +1,5 @@
 import { View, StyleSheet, TextInput, TouchableOpacity, Text } from 'react-native'
-import { globalStyle, MAIN_COLOR, MUTED_COLOR } from '../styles';
+import { globalStyle, MAIN_COLOR, MUTED_COLOR } from '../../styles';
 import { useEffect, useState } from 'react';
 import { addService, getAService, updateService } from '../services/api'
 

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Alert } from "react-native"
 import { getAService, deleteService } from '../services/api'
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu'
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons'
-import { MAIN_COLOR } from '../styles'
+import { MAIN_COLOR } from '../../styles'
 
 const Detail = ({ route, navigation }) => {
     const { id } = route.params;

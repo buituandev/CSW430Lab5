@@ -17,11 +17,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
 import { MAIN_COLOR } from './styles';
-import Login from './screens/Login';
-import Home from './screens/Home';
-import Detail from './screens/Detail'
-import Modify from './screens/Modify'
-import Customer from './screens/Customer'
+import Login from './src/screens/Login';
+import Home from './src/screens/Home';
+import Detail from './src/screens/Detail'
+import Modify from './src/screens/Modify'
+import Customer from './src/screens/Customer'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Tab = createBottomTabNavigator();

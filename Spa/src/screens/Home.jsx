@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Image, View, Text, FlatList, StyleSheet, TouchableOpacity } from "react-native"
 import { getAllServices } from "../services/api"
-import { globalStyle, MAIN_COLOR } from "../styles"
+import { globalStyle, MAIN_COLOR } from "../../styles"
 import { MaterialDesignIcons } from "@react-native-vector-icons/material-design-icons"
 
 const Home = ({ navigation }) => {
