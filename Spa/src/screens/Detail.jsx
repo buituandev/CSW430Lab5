@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Alert } from "react-native"
 import { getAService, deleteService } from '../services/api'
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu'
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons'
-import { MAIN_COLOR } from '../../styles'
+import formatVND from "../utils/money"
 
 const Detail = ({ route, navigation }) => {
     const { id } = route.params;
@@ -83,10 +83,10 @@ const Detail = ({ route, navigation }) => {
     return (
         <View style={styles.container}>
             <Text><Text style={styles.label}>Service name:</Text> {service.name}</Text>
-            <Text><Text style={styles.label}>Price:</Text> {service.price} đ</Text>
+            <Text><Text style={styles.label}>Price:</Text> {formatVND(service.price)}</Text>
             <Text><Text style={styles.label}>Creator:</Text> {service.user?.name}</Text>
-            <Text><Text style={styles.label}>Time:</Text> {service.createdAt}</Text>
-            <Text><Text style={styles.label}>Final Update:</Text> {service.updatedAt}</Text>
+            <Text><Text style={styles.label}>Time:</Text> {new Date(service.createdAt).toLocaleString()}</Text>
+            <Text><Text style={styles.label}>Final Update:</Text> {new Date(service.updatedAt).toLocaleString()}</Text>
         </View>
     )
 }

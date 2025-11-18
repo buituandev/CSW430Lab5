@@ -3,6 +3,8 @@ import { Image, View, Text, FlatList, StyleSheet, TouchableOpacity } from "react
 import { getAllServices } from "../services/api"
 import { globalStyle, MAIN_COLOR } from "../../styles"
 import { MaterialDesignIcons } from "@react-native-vector-icons/material-design-icons"
+import formatVND from "../utils/money"
+
 
 const Home = ({ navigation }) => {
     const [services, setServices] = useState([])
@@ -26,14 +28,14 @@ const Home = ({ navigation }) => {
                 navigation.navigate('Service', { id: item._id })
             }} style={styles.item} onPress={() => navigation.navigate("Detail", { id: item._id })}>
                 <Text style={styles.name}>{item.name}</Text>
-                <Text>{item.price} đ</Text>
+                <Text>{formatVND(item.price)}</Text>
             </TouchableOpacity>
         )
     }
 
     return (
         <View style={[globalStyle.container, styles.container]}>
-            <Image resizeMode="cover" source={require("../assets/logo.png")} style={styles.logo} />
+            <Image resizeMode="cover" source={require("../../assets/logo.png")} style={styles.logo} />
             <View style={styles.sectionContainer}>
                 <Text style={styles.name}>Danh sách dịch vụ</Text>
                 <MaterialDesignIcons onPress={() => {

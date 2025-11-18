@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { TextInput, View, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native';
-import { globalStyle, MAIN_COLOR, MUTED_COLOR } from '../styles';
+import { globalStyle, MAIN_COLOR, MUTED_COLOR } from '../../styles';
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
-import { login } from '../src/services/api';
+import { login } from '../services/api';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import AsyncStorage, { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
@@ -45,8 +45,8 @@ const Login = ({ navigation }) => {
     const insets = useSafeAreaInsets();
 
     return (
-        <View style={[globalStyle.container, {backgroundColor: MAIN_COLOR}]}>
-            <View style={[styles.container, {marginTop: insets.top}]}>
+        <View style={[globalStyle.container, { backgroundColor: MAIN_COLOR }]}>
+            <View style={[styles.container, { marginTop: insets.top }]}>
                 <Text style={styles.title}>Login</Text>
 
                 <TextInput

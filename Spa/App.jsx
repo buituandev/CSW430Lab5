@@ -151,7 +151,7 @@ function App() {
     <SafeAreaProvider>
       <MenuProvider>
         <NavigationContainer>
-          <StatusBar barStyle={'light-content'} />
+          <StatusBar barStyle={'light-content'} backgroundColor={MAIN_COLOR} />
           <StackScreen />
         </NavigationContainer>
       </MenuProvider>
